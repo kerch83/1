@@ -1,0 +1,15 @@
+{
+  "name": "decentralized-chat",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bot": "npm run -w packages/bot dev",
+    "webapp": "npm run -w packages/webapp dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
