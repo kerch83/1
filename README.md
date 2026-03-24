@@ -20,13 +20,20 @@ For a deeper dive into the project's philosophy and mechanics, please see our wh
 
 ---
 
+## Current Status
+
+The repository now includes an initial monorepo scaffold with three workspaces:
+
+1. `packages/shared` — shared TypeScript domain logic.
+2. `packages/bot` — a minimal Node.js bot/node entrypoint.
+3. `packages/webapp` — a lightweight browser UI scaffold.
+
+---
+
 ## Getting Started
 
 1.  Clone the repository.
 2.  Install dependencies: `npm install`
-3.  Run the web application: `npm run dev --workspace=packages/webapp`
-4.  Run the bot: `npm run dev --workspace=packages/bot`
-
-## Contributing
-
-We welcome contributions! Please see our [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on how to get involved.
+3.  Build all packages: `npm run build`
+4.  Run the web application: `npm run webapp`
+5.  Run the bot: `npm run bot`
