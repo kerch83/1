@@ -1,0 +1,14 @@
+{
+  "name": "@decentralized-chat/bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "npm run build --workspace @decentralized-chat/shared && node --watch dist/index.js"
+  },
+  "dependencies": {
+    "@decentralized-chat/shared": "0.1.0"
+  }
+}

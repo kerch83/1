@@ -5,9 +5,11 @@
     "packages/*"
   ],
   "scripts": {
-    "bot": "npm run -w packages/bot dev",
-    "webapp": "npm run -w packages/webapp dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build --workspaces",
+    "bot": "npm run build --workspace @decentralized-chat/bot && node packages/bot/dist/index.js",
+    "typecheck": "npm run build --workspaces",
+    "webapp": "npm run build --workspace @decentralized-chat/webapp && npm run dev --workspace @decentralized-chat/webapp",
+    "test": "npm run typecheck"
   },
   "devDependencies": {
     "typescript": "^5.0.0"
